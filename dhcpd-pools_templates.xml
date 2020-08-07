@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2020-08-07T14:05:49Z</date>
+    <date>2020-08-07T14:23:03Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -88,6 +88,13 @@ data</params>
                                     <name>DHCPD-POOLS : {#LOCATION}</name>
                                 </application_prototype>
                             </application_prototypes>
+                            <trigger_prototypes>
+                                <trigger_prototype>
+                                    <expression>{last()}&lt;{$MIN_FREE_IP}</expression>
+                                    <name>Less then {$MIN_FREE_IP} in {#LOCATION}</name>
+                                    <priority>HIGH</priority>
+                                </trigger_prototype>
+                            </trigger_prototypes>
                         </item_prototype>
                         <item_prototype>
                             <name>{#LOCATION} : Percent IP used</name>
@@ -287,6 +294,11 @@ data</params>
                 </discovery_rule>
             </discovery_rules>
             <macros>
+                <macro>
+                    <macro>{$MIN_FREE_IP}</macro>
+                    <value>10</value>
+                    <description>Minimum Free IP</description>
+                </macro>
                 <macro>
                     <macro>{$PERCENT_IP_USED}</macro>
                     <value>90</value>
