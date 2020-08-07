@@ -1,3 +1,5 @@
 This projet is a Zabbix 5 template to use dhcpd-pools ( http://dhcpd-pools.sourceforge.net ) to monitor ISC DHCPD shared network status.
 
 It will create items ( Already Used IP, Defined IP, Free IP, Percent IP already use at least for 1 lease, Percent IP used, Status, Touched IP, Used IP ) for each Shared Network 
+
+Also create a trigger on " Percent IP used " and a graph for each Shared Network that is show in a screen
