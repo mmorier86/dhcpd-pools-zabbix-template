@@ -1,0 +1,1 @@
+This projet is a Zabbix 5 template to use dhcpd-pools ( http://dhcpd-pools.sourceforge.net ) to monitor ISC DHCPD shared network status.
