@@ -2,4 +2,6 @@ This projet is a Zabbix 5 template to use dhcpd-pools V3.x+ for JSON support ( h
 
 It will create items ( Already Used IP, Defined IP, Free IP, Percent IP already use at least for 1 lease, Percent IP used, Status, Touched IP, Used IP ) for each Shared Network 
 
-Also create a trigger on " Percent IP used " and a graph for each Shared Network that is show in a screen
+Also create a trigger on " Percent IP used " and a graph for each Shared Network that is shown in a screen
+
+You will need to put EnableRemoteCommands=1 on zabbix_agentd.conf of the host that run DHCPD
