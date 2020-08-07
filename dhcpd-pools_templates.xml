@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2020-08-07T14:00:08Z</date>
+    <date>2020-08-07T14:05:49Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -72,7 +72,7 @@ data</params>
                             </application_prototypes>
                         </item_prototype>
                         <item_prototype>
-                            <name>{#LOCATION} : Free IP used</name>
+                            <name>{#LOCATION} : Free IP</name>
                             <type>CALCULATED</type>
                             <key>DHCPD-POOLS[{#LOCATION},FREE]</key>
                             <delay>5m</delay>
@@ -137,7 +137,7 @@ data</params>
                             </application_prototypes>
                         </item_prototype>
                         <item_prototype>
-                            <name>{#LOCATION} : Touched IP used</name>
+                            <name>{#LOCATION} : Touched IP</name>
                             <type>CALCULATED</type>
                             <key>DHCPD-POOLS[{#LOCATION},TOUCHED]</key>
                             <delay>5m</delay>
@@ -192,7 +192,7 @@ data</params>
                             </application_prototypes>
                         </item_prototype>
                         <item_prototype>
-                            <name>{#LOCATION} : Used IP used</name>
+                            <name>{#LOCATION} : Used IP</name>
                             <type>CALCULATED</type>
                             <key>DHCPD-POOLS[{#LOCATION},USED]</key>
                             <delay>5m</delay>
