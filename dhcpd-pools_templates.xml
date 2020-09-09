@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2020-08-07T14:29:51Z</date>
+    <date>2020-09-09T13:45:31Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -91,6 +91,8 @@ data</params>
                             <trigger_prototypes>
                                 <trigger_prototype>
                                     <expression>{last()}&lt;{$MIN_FREE_IP}</expression>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}&lt;{$MIN_FREE_IP}+10</recovery_expression>
                                     <name>Less then {$MIN_FREE_IP} lease available in {#LOCATION}</name>
                                     <priority>HIGH</priority>
                                 </trigger_prototype>
@@ -117,7 +119,9 @@ data</params>
                             <trigger_prototypes>
                                 <trigger_prototype>
                                     <expression>{last()}&gt;{$PERCENT_IP_USED}</expression>
-                                    <name>More then {$PERCENT_IP_USED}% IP used in {#LOCATION}</name>
+                                    <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
+                                    <recovery_expression>{last()}&gt;{$PERCENT_IP_USED}-5</recovery_expression>
+                                    <name>More than {$PERCENT_IP_USED}% IP used in {#LOCATION}</name>
                                     <priority>AVERAGE</priority>
                                 </trigger_prototype>
                             </trigger_prototypes>
