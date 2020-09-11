@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2020-09-09T13:45:31Z</date>
+    <date>2020-09-11T12:07:49Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -120,7 +120,7 @@ data</params>
                                 <trigger_prototype>
                                     <expression>{last()}&gt;{$PERCENT_IP_USED}</expression>
                                     <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-                                    <recovery_expression>{last()}&gt;{$PERCENT_IP_USED}-5</recovery_expression>
+                                    <recovery_expression>{last()}&lt;{$PERCENT_IP_USED}-5</recovery_expression>
                                     <name>More than {$PERCENT_IP_USED}% IP used in {#LOCATION}</name>
                                     <priority>AVERAGE</priority>
                                 </trigger_prototype>
