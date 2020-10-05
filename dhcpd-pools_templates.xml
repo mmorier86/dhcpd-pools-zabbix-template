@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <zabbix_export>
     <version>5.0</version>
-    <date>2020-09-11T12:07:49Z</date>
+    <date>2020-10-05T12:13:41Z</date>
     <groups>
         <group>
             <name>Templates</name>
@@ -92,7 +92,7 @@ data</params>
                                 <trigger_prototype>
                                     <expression>{last()}&lt;{$MIN_FREE_IP}</expression>
                                     <recovery_mode>RECOVERY_EXPRESSION</recovery_mode>
-                                    <recovery_expression>{last()}&lt;{$MIN_FREE_IP}+10</recovery_expression>
+                                    <recovery_expression>{last()}&gt;{$MIN_FREE_IP}+10</recovery_expression>
                                     <name>Less then {$MIN_FREE_IP} lease available in {#LOCATION}</name>
                                     <priority>HIGH</priority>
                                 </trigger_prototype>
